@@ -30,6 +30,10 @@ RUN npm run build
 # Production stage - use Caddy to serve static files
 FROM caddy:2-alpine
 
+# Accept build arguments for environment variables in the final stage too
+ARG VITE_API_BASE_URL
+ENV VITE_API_BASE_URL=$VITE_API_BASE_URL
+
 # Copy Caddyfile first
 COPY Caddyfile /etc/caddy/Caddyfile
 
