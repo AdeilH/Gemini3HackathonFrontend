@@ -1,4 +1,4 @@
-c# Use the Node alpine official image for building
+# Use the Node alpine official image for building
 FROM node:lts-alpine AS build
 LABEL authors="Adeel"
 

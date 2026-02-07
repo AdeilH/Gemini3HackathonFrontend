@@ -1,0 +1,19 @@
+:3000 {
+    root * /srv
+    route {
+        # Proxy /api requests to the backend
+        handle_path /api/* {
+            reverse_proxy {$VITE_API_BASE_URL}
+        }
+        
+        # Serve static files
+        file_server
+        
+        # Fallback to index.html for SPA routing
+        try_files {path} /index.html
+    }
+    
+    log {
+        output stdout
+    }
+}
