@@ -1,0 +1,5 @@
+[build]
+builder = "DOCKERFILE"
+
+[deploy]
+startCommand = "caddy run --config /etc/caddy/Caddyfile --adapter caddyfile"
