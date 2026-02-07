@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Frontend Assessment</h1>
+      <h1>Gemini Coach</h1>
       {!token ? (
         <Login onLoginSuccess={handleLoginSuccess} />
       ) : (
